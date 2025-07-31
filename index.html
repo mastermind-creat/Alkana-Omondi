@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/favicon.ico">
+    <script src="js/gallery.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -160,6 +161,20 @@
         #view-more-gallery.loading i {
             display: none;
         }
+        /* Ensure consistent styling with existing design */
+        #imageUpload {
+            display: none; /* Hide the file input, triggered by button */
+        }
+
+        /* Optional: Add animation for new images */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        #gallery-grid img {
+            animation: fadeIn 0.5s ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
@@ -189,9 +204,11 @@
             
             <div class="hidden md:flex items-center space-x-4">
                 <button id="dark-mode-toggle" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
-                    <i class="fas fa-moon dark:hidden"></i>
-                    <i class="fas fa-sun hidden dark:inline"></i>
+                    <i class="fas fa-moon " id="icon-moon"></i>
+                    <i class="fas fa-sun hidden dark:inline" id="icon-sun"></i>
                 </button>
+
+        
                 <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition shadow-md hover:shadow-lg btn-animated">
                     Book a Service
                 </a>
@@ -441,25 +458,37 @@
                     My Recent Projects
                 </h2>
                 <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto animated-text">
-                    Explore some of my recent plumbing work, showcasing quality and attention to detail.
+                    Explore some of my recent plumbing work, showcasing quality and attention to detail. Upload or delete images with the correct passkey to personalize this gallery.
                 </p>
+            </div>
+            
+            <div class="text-center mb-8">
+                <input type="file" id="imageUpload" accept="image/jpeg,image/png,image/jpg" class="hidden" />
+                <button id="uploadButton" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full font-medium transition shadow-md hover:shadow-lg btn-animated relative mr-4">
+                    Upload Image
+                    <i class="fas fa-upload ml-2"></i>
+                </button>
+                <button id="deleteButton" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-medium transition shadow-md hover:shadow-lg btn-animated relative">
+                    Delete Image
+                    <i class="fas fa-trash ml-2"></i>
+                </button>
             </div>
             
             <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
-                         alt="Bathroom installation by Alkana Omondi" 
-                         class="w-full h-64 object-cover hover:scale-105 transition duration-500" loading="lazy">
+                        alt="Bathroom installation by Alkana Omondi" 
+                        class="w-full h-64 object-cover hover:scale-105 transition duration-500" loading="lazy">
                 </div>
                 <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
-                         alt="Kitchen plumbing by Alkana Omondi" 
-                         class="w-full h-64 object-cover hover:scale-105 transition duration-500" loading="lazy">
+                        alt="Kitchen plumbing by Alkana Omondi" 
+                        class="w-full h-64 object-cover hover:scale-105 transition duration-500" loading="lazy">
                 </div>
                 <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
-                         alt="Pipe installation by Alkana Omondi" 
-                         class="w-full h-64 object-cover hover:scale-105 transition duration-500" loading="lazy">
+                        alt="Pipe installation by Alkana Omondi" 
+                        class="w-full h-64 object-cover hover:scale-105 transition duration-500" loading="lazy">
                 </div>
             </div>
             

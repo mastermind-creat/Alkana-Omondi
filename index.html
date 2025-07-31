@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en" class="dark:bg-gray-900 transition-colors duration-300">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alkana Omondi, your trusted plumber in Kisumu. Offering fast, reliable, and affordable plumbing services with 24/7 emergency support.">
+    <meta name="keywords" content="Alkana Omondi, plumber Kisumu, plumbing services, emergency plumbing, drain cleaning, leak repair">
+    <meta name="author" content="Alkana Omondi">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <meta property="og:title" content="Alkana Omondi Plumbing Services">
+    <meta property="og:description" content="Trusted plumbing services in Kisumu by Alkana Omondi. 24/7 emergency support, leak repairs, drain cleaning, and more.">
+    <meta property="og:image" content="https://yourdomain.com/images/alkana-omondi.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:type" content="website">
+    <title>Alkana Omondi | Expert Plumbing Services in Kisumu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+        }
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .dark .nav-scrolled {
+            background-color: rgba(17, 24, 39, 0.95);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .testimonial-slide {
+            animation: slideIn 0.5s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .hamburger {
+            transition: all 0.3s ease;
+        }
+        .hamburger.active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        /* Accessibility Enhancements */
+        :focus {
+            outline: 2px solid #2563eb;
+            outline-offset: 2px;
+        }
+        /* Lazy Loading Images */
+        img {
+            loading: lazy;
+        }
+        /* Button Animations */
+        .btn-animated {
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+        .btn-animated:hover {
+            transform: translateY(-2px);
+        }
+        /* Cookie Consent */
+        #cookie-consent {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #1f2937;
+            color: white;
+            padding: 1rem;
+            z-index: 1000;
+        }
+        #cookie-consent.show {
+            display: block;
+        }
+        /* Gradient Text for Hero */
+        .gradient-text {
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 5s ease infinite;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* Animated Text */
+        .animated-text {
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Chatbot Animations */
+        #ai-chat-container {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        #ai-chat-container.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .ai-message {
+            animation: messageFadeIn 0.5s ease-out;
+        }
+        @keyframes messageFadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .quick-question {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            position: relative;
+        }
+        .quick-question:hover::after {
+            content: 'Get quick response';
+            position: absolute;
+            bottom: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2563eb;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        .quick-question:hover {
+            transform: translateY(-2px);
+        }
+        /* Dark Mode Consistency */
+        .dark .bg-white { background-color: #1f2937; }
+        .dark .bg-gray-50 { background-color: #111827; }
+        .dark .text-gray-800 { color: #f9fafb; }
+        .dark .text-gray-700 { color: #d1d5db; }
+        .dark .text-gray-600 { color: #9ca3af; }
+        .dark .bg-gray-100 { background-color: #374151; }
+        .dark .bg-blue-100 { background-color: #1e40af; }
+        .dark .border-gray-300 { border-color: #4b5563; }
+        /* Gallery Loading */
+        #view-more-gallery.loading::after {
+            content: 'Loading...';
+        }
+        #view-more-gallery.loading i {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Cookie Consent Popup -->
+    <div id="cookie-consent" class="text-center">
+        <p class="text-sm mb-4">This website uses cookies to improve your experience. By continuing, you agree to our <a href="/privacy-policy" class="underline hover:text-blue-400">Privacy Policy</a>.</p>
+        <button id="accept-cookies" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition">Accept</button>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="fixed w-full z-50">
+        <nav id="navbar" class="py-4 px-6 md:px-12 lg:px-24 flex justify-between items-center bg-white dark:bg-gray-800">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-blue-600 dark:text-blue-400 flex items-center">
+                    <i class="fas fa-wrench mr-2"></i>
+                    <span>Alkana Omondi</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Home</a>
+                <a href="#services" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Services</a>
+                <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">About</a>
+                <a href="#testimonials" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Testimonials</a>
+                <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-4">
+                <button id="dark-mode-toggle" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition shadow-md hover:shadow-lg btn-animated">
+                    Book a Service
+                </a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="hamburger focus:outline-none" aria-label="Toggle mobile menu">
+                    <span class="hamburger-line block w-6 h-0.5 bg-gray-700 dark:bg-gray-300 mb-1.5 transition"></span>
+                    <span class="hamburger-line block w-6 h-0.5 bg-gray-700 dark:bg-gray-300 mb-1.5 transition"></span>
+                    <span class="hamburger-line block w-6 h-0.5 bg-gray-700 dark:bg-gray-300 transition"></span>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 w-full py-4 px-6 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Home</a>
+                <a href="#services" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Services</a>
+                <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">About</a>
+                <a href="#testimonials" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Testimonials</a>
+                <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition text-center btn-animated">
+                    Book a Service
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center pt-16">
+        <div class="absolute inset-0 bg-gray-900">
+            <img src="images/ken.jpg" 
+                 alt="Alkana Omondi at work" 
+                 class="w-full h-full object-cover opacity-70" loading="lazy">
+        </div>
+        
+        <div class="hero-overlay absolute inset-0"></div>
+        
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-6">
+                Alkana Omondi: Your Expert Plumber
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto animated-text">
+                Over 15 years of experience providing reliable plumbing solutions in Kisumu. Available 24/7 for all your plumbing needs.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+254712345678" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium transition shadow-md hover:shadow-lg btn-animated flex items-center justify-center">
+                    <i class="fas fa-phone mr-2"></i> Call Now
+                </a>
+                <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-medium transition shadow-md hover:shadow-lg btn-animated flex items-center justify-center">
+                    <i class="fas fa-file-invoice-dollar mr-2"></i> Get a Free Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="images/about.jpg" 
+                         alt="Alkana Omondi, professional plumber" 
+                         class="rounded-xl shadow-xl w-full h-auto max-w-lg mx-auto" loading="lazy">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-6">
+                        About Alkana Omondi
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 animated-text">
+                        I'm Alkana Omondi, a licensed master plumber with over 15 years of experience serving Kisumu. I take pride in delivering high-quality, affordable plumbing solutions with a personal touch. Whether it's a minor leak or a major emergency, I'm committed to getting the job done right.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-check-circle text-blue-600 dark:text-blue-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-white">Certified Expertise</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Licensed master plumber</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-600 dark:text-blue-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-white">24/7 Availability</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Ready for emergencies anytime</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-dollar-sign text-blue-600 dark:text-blue-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-white">Transparent Pricing</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Fair rates, no surprises</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-thumbs-up text-blue-600 dark:text-blue-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-white">Customer Focused</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Your satisfaction is my priority</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-gray-100 dark:bg-gray-700 px-4 py-2 rounded-full">
+                            <i class="fas fa-medal text-blue-600 dark:text-blue-400 mr-2"></i>
+                            <span class="text-sm font-medium">Master Plumber</span>
+                        </div>
+                        <div class="flex items-center bg-gray-100 dark:bg-gray-700 px-4 py-2 rounded-full">
+                            <i class="fas fa-award text-blue-600 dark:text-blue-400 mr-2"></i>
+                            <span class="text-sm font-medium">Trusted in Kisumu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+                    My Plumbing Services
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto animated-text">
+                    I offer a wide range of plumbing services tailored to your needs, from quick fixes to complex installations, all with a commitment to quality.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-faucet text-blue-600 dark:text-blue-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Leak Repairs</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            I quickly diagnose and repair leaks, from faucets to pipes, ensuring minimal disruption and long-lasting fixes.
+                        </p>
+                        <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition btn-animated">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-water text-blue-600 dark:text-blue-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Drain Cleaning</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            I use advanced techniques to clear clogs and maintain smooth-flowing drains, preventing future blockages.
+                        </p>
+                        <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition btn-animated">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-fire text-blue-600 dark:text-blue-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Water Heater Services</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            I install, repair, and maintain water heaters to ensure you have reliable hot water at all times.
+                        </p>
+                        <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition btn-animated">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-tools text-blue-600 dark:text-blue-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Pipe Repair & Replacement</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            Expert pipe services for repairs and replacements, working with all materials for durable solutions.
+                        </p>
+                        <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition btn-animated">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-bath text-blue-600 dark:text-blue-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Bathroom Plumbing</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            I handle all bathroom plumbing needs, from sink and toilet installations to complete remodels.
+                        </p>
+                        <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition btn-animated">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-exclamation-triangle text-blue-600 dark:text-blue-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Emergency Plumbing</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            I'm available 24/7 for urgent plumbing issues to prevent damage and restore your system quickly.
+                        </p>
+                        <a href="tel:+254712345678" class="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-medium transition btn-animated">
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+                    My Recent Projects
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto animated-text">
+                    Explore some of my recent plumbing work, showcasing quality and attention to detail.
+                </p>
+            </div>
+            
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Bathroom installation by Alkana Omondi" 
+                         class="w-full h-64 object-cover hover:scale-105 transition duration-500" loading="lazy">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Kitchen plumbing by Alkana Omondi" 
+                         class="w-full h-64 object-cover hover:scale-105 transition duration-500" loading="lazy">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Pipe installation by Alkana Omondi" 
+                         class="w-full h-64 object-cover hover:scale-105 transition duration-500" loading="lazy">
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="view-more-gallery" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium transition shadow-md hover:shadow-lg btn-animated relative">
+                    View More Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+                    What My Clients Say
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto animated-text">
+                    Hear from satisfied clients about my reliable and professional plumbing services.
+                </p>
+            </div>
+            
+            <div class="relative">
+                <div id="testimonial-carousel" class="overflow-hidden">
+                    <div class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-md">
+                                <div class="flex items-center mb-6">
+                                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 dark:text-white">Sarah Johnson</h4>
+                                        <div class="flex text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-300 italic">
+                                    "Alkana was a lifesaver when my water heater failed at midnight. He arrived quickly, fixed the issue, and was incredibly professional. Highly recommend!"
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-md">
+                                <div class="flex items-center mb-6">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Thompson" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 dark:text-white">Michael Thompson</h4>
+                                        <div class="flex text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-300 italic">
+                                    "Alkana fixed a tricky leak in my home that others couldn't solve. His expertise and fair pricing make him my go-to plumber."
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-md">
+                                <div class="flex items-center mb-6">
+                                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Lisa Chen" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 dark:text-white">Lisa Chen</h4>
+                                        <div class="flex text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-300 italic">
+                                    "Alkana renovated my bathroom plumbing with great care. He suggested efficient fixtures that saved me money. Excellent service!"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="prev-testimonial" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-700 p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-600 transition">
+                    <i class="fas fa-chevron-left text-blue-600 dark:text-blue-400"></i>
+                </button>
+                <button id="next-testimonial" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-700 p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-600 transition">
+                    <i class="fas fa-chevron-right text-blue-600 dark:text-blue-400"></i>
+                </button>
+            </div>
+            
+            <div class="flex justify-center mt-8 space-x-2">
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-600 dark:hover:bg-blue-400 transition" data-index="0"></button>
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-600 dark:hover:bg-blue-400 transition" data-index="1"></button>
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-600 dark:hover:bg-blue-400 transition" data-index="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-6">
+                        Contact Alkana
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 animated-text">
+                        Need plumbing help or have questions? Reach out via the form, call, or WhatsApp. I respond within 24 hours.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600 dark:text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-white">Service Area</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Kisumu & Surrounding Areas, Kenya</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-blue-600 dark:text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-white">Call Me</h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    <a href="tel:+254712345678" class="hover:text-blue-600 dark:hover:text-blue-400 transition">+254 712 345 678</a><br>
+                                    <span class="text-sm">24/7 Emergency Service</span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600 dark:text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-white">Email Me</h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    <a href="mailto:alkana@omondiplumbing.com" class="hover:text-blue-600 dark:hover:text-blue-400 transition">alkana@omondiplumbing.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-600 dark:text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-white">Availability</h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    Monday - Friday: 8:00 AM - 6:00 PM<br>
+                                    Saturday: 9:00 AM - 4:00 PM<br>
+                                    Sunday: Emergency Services Only
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="font-semibold text-gray-800 dark:text-white mb-4">Connect With Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://facebook.com/alkanaomondi" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/alkanaomondi" target="_blank" class="bg-blue-400 hover:bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/alkanaomondi" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/+254712345678" target="_blank" class="bg-green-500 hover:bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                            Request a Free Quote
+                        </h3>
+                        
+                        <form id="contact-form" class="space-y-6" action="/submit-form" method="POST">
+                            <div>
+                                <label for="name" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
+                                <p id="name-error" class="text-red-500 text-sm mt-1 hidden">Please enter your name</p>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
+                                <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email</p>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
+                                <p id="phone-error" class="text-red-500 text-sm mt-1 hidden">Please enter a valid phone number</p>
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Service Needed</label>
+                                <select id="service" name="service" 
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
+                                    <option value="">Select a service</option>
+                                    <option value="Leak Repairs">Leak Repairs</option>
+                                    <option value="Drain Cleaning">Drain Cleaning</option>
+                                    <option value="Water Heater Services">Water Heater Services</option>
+                                    <option value="Pipe Repair & Replacement">Pipe Repair & Replacement</option>
+                                    <option value="Bathroom Plumbing">Bathroom Plumbing</option>
+                                    <option value="Emergency Plumbing">Emergency Plumbing</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" 
+                                          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition bg-white dark:bg-gray-700 text-gray-800 dark:text-white"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-md hover:shadow-lg btn-animated">
+                                Submit Request
+                            </button>
+                        </form>
+                        
+                        <div id="form-success" class="hidden mt-4 p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg">
+                            <i class="fas fa-check-circle mr-2"></i> Thank you! Your message has been sent. I'll contact you soon.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15954.816996572545!2d34.7479668!3d-0.0917016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa3c8b7e7c3c1%3A0x4b8b7e3c2d6f5a9e!2sKisumu%2C%20Kenya!5e0!3m2!1sen!2sus!4v1697654321098!5m2!1sen!2sus" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="text-2xl font-bold text-white flex items-center mb-4">
+                        <i class="fas fa-wrench mr-2"></i>
+                        <span>Alkana Omondi</span>
+                    </a>
+                    <p class="text-gray-400 mb-4">
+                        Your trusted plumber in Kisumu, delivering quality service with a personal touch since 2008.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com/alkanaomondi" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/alkanaomondi" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/alkanaomondi" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/+254712345678" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Leak Repairs</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Drain Cleaning</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Water Heater Services</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Emergency Plumbing</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Bathroom Plumbing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-500"></i>
+                            <span>Kisumu & Surrounding Areas, Kenya</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-blue-500"></i>
+                            <a href="tel:+254712345678" class="hover:text-white transition">+254 712 345 678</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-500"></i>
+                            <a href="mailto:alkana@omondiplumbing.com" class="hover:text-white transition">alkana@omondiplumbing.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 Alkana Omondi. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="/privacy-policy" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="/terms" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                    <a href="/license" class="text-gray-400 hover:text-white text-sm transition">License Info</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
+            menuToggle.setAttribute('aria-expanded', isExpanded);
+        });
+        
+        // Sticky navbar on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+        
+        // Testimonial carousel
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        const carousel = document.getElementById('testimonial-carousel');
+        const carouselContent = carousel.querySelector('.flex');
+        
+        function showTestimonial(index) {
+            currentTestimonial = index;
+            const offset = -index * 100;
+            carouselContent.style.transform = `translateX(${offset}%)`;
+            
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('bg-blue-600', i === index);
+                dot.classList.toggle('bg-gray-300', i !== index);
+                dot.classList.toggle('dark:bg-blue-400', i === index);
+                dot.classList.toggle('dark:bg-gray-600', i !== index);
+            });
+        }
+        
+        document.getElementById('prev-testimonial').addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        });
+        
+        document.getElementById('next-testimonial').addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        });
+        
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                showTestimonial(parseInt(dot.dataset.index));
+            });
+        });
+        
+        // Auto slide testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 8000);
+        
+        // Form validation with improved feedback
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+        
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            let isValid = true;
+            
+            // Validate name
+            const name = document.getElementById('name');
+            const nameError = document.getElementById('name-error');
+            if (name.value.trim() === '') {
+                nameError.classList.remove('hidden');
+                name.setAttribute('aria-invalid', 'true');
+                isValid = false;
+            } else {
+                nameError.classList.add('hidden');
+                name.setAttribute('aria-invalid', 'false');
+            }
+            
+            // Validate email
+            const email = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                emailError.classList.remove('hidden');
+                email.setAttribute('aria-invalid', 'true');
+                isValid = false;
+            } else {
+                emailError.classList.add('hidden');
+                email.setAttribute('aria-invalid', 'false');
+            }
+            
+            // Validate phone
+            const phone = document.getElementById('phone');
+            const phoneError = document.getElementById('phone-error');
+            const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+            if (!phoneRegex.test(phone.value)) {
+                phoneError.classList.remove('hidden');
+                phone.setAttribute('aria-invalid', 'true');
+                isValid = false;
+            } else {
+                phoneError.classList.add('hidden');
+                phone.setAttribute('aria-invalid', 'false');
+            }
+            
+            if (isValid) {
+                try {
+                    // Simulate form submission
+                    const response = await fetch('/submit-form', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            name: name.value,
+                            email: email.value,
+                            phone: phone.value,
+                            service: document.getElementById('service').value,
+                            message: document.getElementById('message').value
+                        })
+                    });
+                    
+                    contactForm.reset();
+                    formSuccess.classList.remove('hidden');
+                    
+                    setTimeout(() => {
+                        formSuccess.classList.add('hidden');
+                    }, 5000);
+                } catch (error) {
+                    console.error('Form submission error:', error);
+                    alert('There was an error submitting your request. Please try again or call directly.');
+                }
+            }
+        });
+        
+        // Smooth scrolling with accessibility
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    targetElement.focus({ preventScroll: true });
+                    
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        menuToggle.classList.remove('active');
+                        mobileMenu.classList.add('hidden');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        });
+
+        // Cookie Consent Logic
+        const cookieConsent = document.getElementById('cookie-consent');
+        const acceptCookies = document.getElementById('accept-cookies');
+        
+        if (!localStorage.getItem('cookiesAccepted')) {
+            cookieConsent.classList.add('show');
+        }
+        
+        acceptCookies.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieConsent.classList.remove('show');
+        });
+
+        // Dark mode toggle with comprehensive theming
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const applyDarkMode = (isDark) => {
+            const html = document.documentElement;
+            if (isDark) {
+                html.classList.add('dark');
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                html.classList.remove('dark');
+                localStorage.setItem('darkMode', 'false');
+            }
+        };
+
+        darkModeToggle.addEventListener('click', () => {
+            const isDark = !document.documentElement.classList.contains('dark');
+            applyDarkMode(isDark);
+        });
+
+        // Initialize theme
+        const storedTheme = localStorage.getItem('darkMode');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyDarkMode(storedTheme === null ? prefersDark : storedTheme === 'true');
+
+        // Gallery view more button
+        const viewMoreButton = document.getElementById('view-more-gallery');
+        const galleryGrid = document.getElementById('gallery-grid');
+        const additionalImages = [
+            {
+                src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+                alt: "New pipe installation by Alkana Omondi"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+                alt: "Kitchen sink repair by Alkana Omondi"
+            }
+        ];
+        let isLoading = false;
+
+        viewMoreButton.addEventListener('click', () => {
+            if (isLoading || additionalImages.length === 0) return;
+
+            isLoading = true;
+            viewMoreButton.classList.add('loading');
+            viewMoreButton.disabled = true;
+
+            setTimeout(() => {
+                additionalImages.forEach(image => {
+                    const div = document.createElement('div');
+                    div.className = 'overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300';
+                    div.innerHTML = `
+                        <img src="${image.src}" alt="${image.alt}" 
+                             class="w-full h-64 object-cover hover:scale-105 transition duration-500" loading="lazy">
+                    `;
+                    galleryGrid.appendChild(div);
+                });
+
+                // Clear additional images to prevent re-adding
+                additionalImages.length = 0;
+
+                // Update button state
+                viewMoreButton.classList.remove('loading');
+                viewMoreButton.disabled = false;
+                if (additionalImages.length === 0) {
+                    viewMoreButton.textContent = 'No More Projects';
+                    viewMoreButton.disabled = true;
+                    viewMoreButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                    viewMoreButton.classList.add('bg-gray-400', 'cursor-not-allowed');
+                } else {
+                    viewMoreButton.textContent = 'View More Projects';
+                    viewMoreButton.innerHTML += '<i class="fas fa-arrow-right ml-2"></i>';
+                }
+            }, 1500); // Simulate loading delay
+        });
+
+        // AI Widget functionality
+        const aiWidget = document.getElementById('ai-widget');
+        const aiChatContainer = document.getElementById('ai-chat-container');
+        const closeAiChat = document.getElementById('close-ai-chat');
+        const aiChatInput = document.getElementById('ai-chat-input');
+
+        // Debug: Log to ensure elements are found
+        console.log('AI Widget:', aiWidget);
+        console.log('AI Chat Container:', aiChatContainer);
+
+        aiWidget.addEventListener('click', () => {
+            console.log('AI Widget clicked');
+            aiChatContainer.classList.toggle('hidden');
+            aiChatContainer.classList.toggle('show');
+            if (!aiChatContainer.classList.contains('hidden')) {
+                aiChatInput.focus();
+                console.log('Chat container opened, focusing input');
+            }
+        });
+
+        closeAiChat.addEventListener('click', () => {
+            console.log('Close button clicked');
+            aiChatContainer.classList.add('hidden');
+            aiChatContainer.classList.remove('show');
+        });
+
+        // Plumbing knowledge base
+        const plumbingKnowledge = {
+            "service rates": "My standard rates:\n- Basic service call: KES 1,500\n- Leak repair: KES 2,500-5,000\n- Drain cleaning: KES 3,000-6,000\n- Water heater installation: KES 8,000-15,000\n- Emergency call (after hours): +50% of standard rate\n\nPrices vary based on job complexity.",
+            "emergency services": "Yes, I offer 24/7 emergency plumbing services. For urgent issues like burst pipes or sewage backups, call me at +254 712 345 678. I typically respond within 45-90 minutes in Kisumu.",
+            "service areas": "I serve Kisumu and surrounding areas, including:\n- Milimani\n- Riat\n- Mamboleo\n- Kondele\n- Manyatta\n- Nyalenda\n\nContact me to confirm service in your area.",
+            "response time": "I schedule standard calls within 24 hours. Emergency response times:\n- Kisumu CBD: ~45 minutes\n- Suburbs: 60-90 minutes\n- Outskirts: up to 2 hours",
+            "payment methods": "I accept:\n- M-Pesa\n- Cash\n- Bank transfer\n- Credit cards (+3% fee)\n\nPayment is due upon job completion.",
+            "warranty": "My work includes:\n- 1-year labor warranty\n- Manufacturer parts warranty\n- 30-day repair guarantee\n\nKeep your receipt for warranty claims."
+        };
+
+        // Handle quick question buttons
+        document.querySelectorAll('.quick-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const question = button.dataset.question;
+                aiChatInput.value = question;
+                const event = new KeyboardEvent('keypress', { key: 'Enter' });
+                aiChatInput.dispatchEvent(event);
+            });
+        });
+
+        aiChatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && aiChatInput.value.trim()) {
+                const userMessage = aiChatInput.value;
+                addChatMessage('You: ' + userMessage, 'user');
+                aiChatInput.value = '';
+                
+                setTimeout(() => {
+                    const lowerMessage = userMessage.toLowerCase();
+                    let response = "I'm Alkana's virtual assistant. ";
+                    
+                    if (lowerMessage.includes('price') || lowerMessage.includes('rate') || lowerMessage.includes('cost')) {
+                        response += plumbingKnowledge["service rates"];
+                    } else if (lowerMessage.includes('emergency')) {
+                        response += plumbingKnowledge["emergency services"];
+                    } else if (lowerMessage.includes('area') || lowerMessage.includes('location') || lowerMessage.includes('serve')) {
+                        response += plumbingKnowledge["service areas"];
+                    } else if (lowerMessage.includes('time') || lowerMessage.includes('response') || lowerMessage.includes('quick')) {
+                        response += plumbingKnowledge["response time"];
+                    } else if (lowerMessage.includes('pay') || lowerMessage.includes('mpesa') || lowerMessage.includes('cash')) {
+                        response += plumbingKnowledge["payment methods"];
+                    } else if (lowerMessage.includes('warranty') || lowerMessage.includes('guarantee')) {
+                        response += plumbingKnowledge["warranty"];
+                    } else {
+                        response += "For specific plumbing questions, please call me at +254 712 345 678 or use the contact form.";
+                    }
+                    
+                    addChatMessage('AI: ' + response, 'ai');
+                }, 800);
+            }
+        });
+
+        function addChatMessage(message, sender) {
+            const messagesDiv = document.getElementById('ai-chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `text-sm mb-2 ai-message ${sender === 'user' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-300'}`;
+            messageDiv.textContent = message;
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/+254712345678" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg z-50 animate-bounce" aria-label="Contact via WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Floating AI Widget -->
+    <div id="ai-widget" class="fixed bottom-24 right-6 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg z-50 cursor-pointer btn-animated" aria-label="Open AI Assistant">
+        <i class="fas fa-robot text-2xl"></i>
+    </div>
+
+    <!-- AI Chat Container -->
+    <div id="ai-chat-container" class="fixed bottom-32 right-6 w-80 bg-white dark:bg-gray-800 rounded-xl shadow-xl z-50 hidden flex-col border border-gray-200 dark:border-gray-700">
+        <div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center bg-blue-600 text-white rounded-t-xl">
+            <h3 class="font-bold">Alkana's Assistant</h3>
+            <button id="close-ai-chat" class="text-white hover:text-gray-200" aria-label="Close AI Chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="ai-chat-messages" class="flex-1 p-4 overflow-y-auto max-h-64">
+            <div class="text-sm text-gray-500 dark:text-gray-400 mb-2 ai-message">AI: Hello! I'm here to answer your plumbing questions. Try these:</div>
+            <div class="grid grid-cols-2 gap-2 mb-4">
+                <button class="quick-question bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs p-2 rounded" data-question="What are your service rates?">Service Rates</button>
+                <button class="quick-question bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs p-2 rounded" data-question="Do you offer emergency services?">Emergency Services</button>
+                <button class="quick-question bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs p-2 rounded" data-question="What areas do you serve?">Service Areas</button>
+                <button class="quick-question bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs p-2 rounded" data-question="How quickly can you respond?">Response Time</button>
+            </div>
+        </div>
+        <div class="p-4 border-t border-gray-200 dark:border-gray-700">
+            <input type="text" id="ai-chat-input" placeholder="Ask about plumbing..." 
+                   class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-white" aria-label="Ask a plumbing question">
+        </div>
+    </div>
+</body>
+</html>
